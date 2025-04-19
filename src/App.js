@@ -8,6 +8,7 @@ import Marketplace from './pages/Marketplace';
 import Advisory from './pages/Advisory';
 import Irrigation from './pages/Irrigation';
 import KnowledgePortal from './pages/KnowledgePortal';
+import SellerDashboard from './pages/SellerDashboard';
 
 // Components
 import Navbar from './components/Navbar';
@@ -24,6 +25,7 @@ function App() {
           <Route path="/advisory" element={<Advisory />} />
           <Route path="/irrigation" element={<Irrigation />} />
           <Route path="/knowledge" element={<KnowledgePortal />} />
+          <Route path="/seller-dashboard" element={<SellerDashboard />} />
         </Routes>
       </main>
       <Footer />
