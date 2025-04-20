@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { marketplaceService } from '../services/api';
 import '../styles/Marketplace.css';
 
 const Marketplace = () => {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [cart, setCart] = useState([]);
@@ -117,6 +119,11 @@ const Marketplace = () => {
     }
   };
 
+  // This function will handle navigation to the seller dashboard
+  const handleBecomeSeller = () => {
+    navigate('/seller-dashboard');
+  };
+
   return (
     <div className="marketplace-page">
       <div className="container">
@@ -192,7 +199,7 @@ const Marketplace = () => {
             <div className="sell-info">
               <h3>Want to Sell?</h3>
               <p>Register as a seller to list your farm products.</p>
-              <button className="btn sell-btn">Become a Seller</button>
+              <button className="btn sell-btn" onClick={handleBecomeSeller}>Become a Seller</button>
             </div>
           </aside>
 
